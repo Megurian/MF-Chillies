@@ -1,0 +1,427 @@
+/*
+the following class name are already used for navigation bar:
+-- header -- logo -- nav -- text -- cart -- bx 
+-- menu-icon -- sidebar -- logo-sidebar -- nav-sidebar
+*/
+
+.container {
+    height: 100%;
+    background: linear-gradient(45deg, rgb(255, 180, 180), white, rgb(255, 220, 168));
+    background-size: 300% 300%;
+    animation: color 30s ease-in-out infinite;
+}
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+    
+}
+
+
+/* Banner's CSS */
+.banner {
+    height: 100vh;
+    background: url(/img/background.webp) no-repeat center; 
+    background-size: cover;
+    position: relative;  
+}
+
+.title-intro {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /*title and introduction*/
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
+
+.title {
+    padding-bottom: 1em;
+}
+
+.introduction {
+    max-width: 50%;
+    letter-spacing: 0.2rem;
+}
+
+.arrow-down {
+    position: absolute;
+    top: 90%;
+    bottom: 0;
+    left: 50%;
+
+    font-weight: bold;
+    color: white;
+    font-size: xx-large;
+}
+
+.arrow-down .bx {
+    animation: flashing 1.5s infinite linear;
+}
+
+@media only screen and (max-width: 726px) {
+    .banner {
+        height: 75vh;
+    }
+    .title-intro {
+        height: 75vh;
+        font-size: medium; 
+    }
+    .arrow-down {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    .banner {
+        height: 35vh;
+    }
+    .title-intro {
+        height: 35vh;
+        font-size: xx-small;
+    }
+}
+
+
+/* About us CSS */
+.about-us {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.about-us h1 {
+    font-size: xx-large;
+    color: red;
+    padding-bottom: 20px;
+}
+
+.about-us h1::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    display: block;
+    margin: 0 auto;
+    background-color: black;
+}
+
+.about-us p {
+    font-size: large;
+    padding-bottom: 30px;
+    letter-spacing: 0.1rem;
+}
+
+@media only screen and (max-width: 726px) {
+    .about-us h1 {
+        font-size: large;
+    }
+    .about-us p {
+        font-size: medium;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    .about-us h1 {
+        font-size: medium;
+    }
+    .about-us p {
+        font-size: small;
+    }
+}
+
+/* 2nd Part About Us */
+
+.wrapper-picture {
+    width: 100%;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.75);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.content-header {
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 0.2rem;
+}
+
+.content-header h1 {
+    font-size: xx-large;
+}
+
+.content-header p {
+    font-size: large;
+}
+
+.list {
+    list-style: none;
+    text-align: center;
+}
+
+.list h2 {
+    letter-spacing: 0.2rem;
+    font-size: large;
+    color: red;
+}
+
+.list li {
+    padding-top: 10px;
+    list-style: none;
+}
+
+.content .buttons {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content .buttons button {
+    height: 30px;
+    width: 150px;
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+}
+
+.content .buttons button:nth-child(1) {
+    height: 30px;
+    width: 150px;
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.content .buttons button {
+    height: 30px;
+    width: 150px;
+    border-radius: 25px;
+    border: none;
+
+    text-decoration: none;
+    font-weight: 500;
+
+    color: white;
+    background-color: green;
+}
+
+.content .buttons button:nth-child(1):hover {
+    color: black;
+    border: solid 2px black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.content .buttons button:hover {
+    color: black;
+    border: solid 2px green;
+    background-color: white;
+    cursor: pointer;
+}
+
+.picx img{
+    width: 600px;
+    max-width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 1793px) {
+    .wrapper-picture {
+        justify-content: right;
+    }
+}
+
+@media only screen and (min-width: 1793px) {
+    .picx img {
+        width: 60vw;
+        height: 35vw;
+    }
+}
+
+@media only screen and (max-width: 726px) {
+    .content-header h1 {
+        font-size: x-large;
+    }
+    
+    .content-header p {
+        font-size: medium;
+    }
+    .picx img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    .wrapper-picture {
+        background-image: url(/img/chili-picture-wbg.webp);
+        background-size: cover;
+    }
+    .content {
+        margin: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(2px);
+    }
+    .content-header h1 {
+        font-size: large;
+    }
+    .content-header p {
+        font-size: small;
+    }
+    .picx img{
+        display: none;
+        
+    }
+}
+
+
+
+/* Rating Page CSS */
+.rating-page {
+    height: 90vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 990px) {
+    .rating-page {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+/* Best Seller CSS */
+.cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.best-seller {
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 5px 10px 0 black;
+    border-radius: 10px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 630px) {
+    .best-seller {
+        width: 90%;
+        height: auto;
+    }
+}
+
+.card-body {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.best-seller .img img {
+    width: 300px;
+    
+    margin: 20px;
+}
+
+.name {
+    font-size: 15px;
+}
+
+
+/* Review-Rating CSS */
+.rating-review {
+    width: 45%;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 547px;
+    width: 100%;
+    height: 35vh;
+    padding: 25px 0 69px 0;
+    margin: 0 auto;
+}
+
+.rating-title {
+    font-size: 25px;
+    color: red;
+    font-weight: 700;
+    margin: 28px 0;
+    text-align: center;
+}
+
+.avg_rating {
+    margin-bottom: 63px;
+}
+
+.avg_stars {
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    width: 347px;
+    height: 50px;
+    border-radius: 32px;
+    background-color: #f5f8ff;
+    margin-bottom: 8px;
+}
+
+.star {
+    margin: 10px;
+    size-adjust: 10px;
+}
+.star-score {
+    font-size: 16px;
+    color: gray;
+    font-weight: 400;
+    margin-left: auto;
+}
+
+.avg-total {
+    font-size: 16px;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+}
+
+.review {
+    height: auto;
+    width: 100%;
+    background-color: red;
+}

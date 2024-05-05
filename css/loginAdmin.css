@@ -1,0 +1,84 @@
+/*
+the following class name are already used for navigation bar:
+-- header -- logo -- nav -- text -- cart -- bx 
+-- menu-icon -- sidebar -- logo-sidebar -- nav-sidebar
+*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/img/background.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+/*LOG IN*/
+.wrapperLogin {
+    width: 420px;
+    border: 1px solid gray;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px black;
+    color: white;
+    padding: 30px 40px;
+    border-radius: 25px;
+}
+
+.wrapperLogin h1 {
+    font-size: x-large;
+    text-align: center;
+}
+
+.wrapperLogin .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.wrapperLogin .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid gray;
+    border-radius: 25px;
+    font-size: 16px;
+    color: white;
+}
+
+.wrapperLogin .input-box input {
+    text-indent: 20px;
+}
+
+.wrapperLogin .input-box input::placeholder {
+    color: white;
+}
+
+.wrapperLogin .input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapperLogin button {
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+
+

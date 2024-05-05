@@ -1,0 +1,148 @@
+/*
+the following class name are already used for navigation bar:
+-- header -- logo -- nav -- text -- cart -- bx 
+-- menu-icon -- sidebar -- logo-sidebar -- nav-sidebar
+*/
+
+/* CSS FOR ORDER PAGE STARTS HERE */
+
+.order-pg {
+    min-height: 100vh;
+    background-image:url(../img/order_bg.webp);
+    background-size: cover;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.heading-title {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-pg {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.2);
+    background: transparent;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px black;
+    align-items: center;
+}
+
+@media only screen and (max-width: 770px) {
+    .form-pg {
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
+.dropdown {
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.flavr {
+    width: 90%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    background: antiquewhite;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.option {
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.size {
+    margin-top: 20px;
+    padding: 15px 20px;
+}
+
+.radios {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.quantity {
+    margin-top: 20px;
+    padding: 15px 20px;
+}
+
+.int {
+    width: 90%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.buttons {
+    margin-top: 30px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media only screen and (max-width: 425px) {
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.buttons .button {
+    border-radius: 50px;
+    transition: 0.4s;
+}
+
+.buttons .check {
+   padding: 10px 24px;
+   background-color: red;
+   color: white;
+   border: 2px solid grey;
+}
+
+.buttons .cart {
+    padding: 10px 24px;
+    background-color: red;
+    color: white;
+    border: 2px solid grey;
+
+ }
+
+.buttons .edit {
+    padding: 10px 24px;
+    background-color: red;
+    color: white;
+    border: 2px solid grey;
+ }
+
+.buttons .edit:hover, .buttons .cart:hover, .buttons .check:hover {
+     background-color: white;
+     color: black;
+     cursor: pointer;
+ }

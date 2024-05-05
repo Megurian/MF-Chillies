@@ -1,0 +1,289 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family:  Montserrat , sans-serif;
+}
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    border-radius: 0px 0px 10px 10px;
+    height: 5em;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    top: 0;
+    width: 100vw;
+    transition: background-color 0.3s ease-in-out;
+    
+}
+
+@media only screen and (max-width: 430px) {
+    .header {
+        height: 3em;
+    }
+}
+
+@media only screen and (min-width: 1793px) {
+    .header {
+        justify-content: space-evenly;
+    }
+}
+
+.header.scrolled { /* this is for JS */
+    background-image: none;
+    background-color: white;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-left: 3em;
+    transition: color 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 430px) {
+    .logo a {
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 0 1em;
+    }
+}
+
+
+.header.scrolled .logo a { /* this is for JS */
+    color: black;
+    text-shadow: 0 0 0;
+}
+
+.logo a:hover {
+    color: red !important;
+    transition: 300ms;
+}
+
+.nav .text {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding-right: 3em;
+    transition: color 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 430px) {
+    .nav .text {
+        font-size: 0.5rem;
+    }
+}
+
+.nav .cart .bx{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding-right: 3em;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav .menu-icon .bx{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding: 0 2em;
+    transition: color 0.3s ease-in-out;
+}
+
+
+.header.scrolled .nav .text{ /* this is for JS */
+    color: black;
+    border-color: black;
+}
+
+.header.scrolled .nav .cart .bx{ /* this is for JS */
+    color: black;
+    border-color: black;
+}
+
+.header.scrolled .nav .menu-icon .bx{ /* this is for JS */
+    color: black;
+    border-color: black;
+}
+
+.nav .text:hover{
+    color: white;
+    font-weight: bold;
+    transition: 300ms;
+}
+
+.nav .cart .bx:hover {
+    color: white;
+    font-weight: bold;
+    transition: 300ms;
+}
+
+.nav .menu-icon .bx:hover {
+    color: white;
+    font-weight: bold;
+    transition: 300ms;
+}
+
+@media only screen and (max-width: 726px) {
+    .header .hideOnMobile {
+        display: none;
+    }
+}
+
+
+/* Sidebar */
+
+@media only screen and (min-width: 727px) {
+    .menu-icon {
+        display: none;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+.sidebar.scrolled { /* this is for JS */
+    background-image: none;
+    background-color: white;
+}
+
+.logo-sidebar {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo-sidebar a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
+}
+
+.sidebar.scrolled .logo-sidebar a {
+    color: black;
+    text-shadow: 0 0 0;
+}
+
+.logo-sidebar a:hover {
+    color: red !important;
+    transition: 300ms;
+}
+
+.nav-sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: color 0.3s ease-in-out;
+}
+
+.sidebar.scrolled .nav-sidebar a{ /* this is for JS */
+    color: black;
+    border-color: black;
+}
+
+.nav-sidebar a:hover {
+    color: white;
+    font-weight: 1000;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 300ms;
+}
+
+
+
+/* Footer's CSS */
+.footer  {
+    background-color: rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    height: auto;
+    padding: 20px 0;
+    color: white;
+}
+
+.footer .foot {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding: 0 2em;
+}
+
+@media only screen and (max-width: 430px) {
+    .footer .foot {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.icons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 30px;
+    color: black;
+}
+
+.info {
+    list-style: none;
+    font-size: 17px;
+    justify-content: space-between;
+}
+
+.end {
+    align-items: center;
+    justify-content: center;
+}
+
+.end ul {
+    list-style: none;
+}
+
+.copyright {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 5vh;
+    border-top: solid 0.7px;
+    border-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
