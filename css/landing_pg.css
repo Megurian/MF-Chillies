@@ -27,7 +27,7 @@ the following class name are already used for navigation bar:
 /* Banner's CSS */
 .banner {
     height: 100vh;
-    background: url(/img/background.webp) no-repeat center; 
+    background: url(img/background.webp) no-repeat center; 
     background-size: cover;
     position: relative;  
 }
