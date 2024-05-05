@@ -9,7 +9,7 @@ the following class name are already used for navigation bar:
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(/img/background.webp);
+    background-image: url(../img/background.webp);
     background-size: cover;
     background-position: center;
 }
