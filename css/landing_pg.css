@@ -28,7 +28,6 @@ the following class name are already used for navigation bar:
 .banner {
     height: 100vh;
     background-image: url(/img/background.webp);
-    background-image: no-repeat center; 
     background-size: cover;
     position: relative;  
 }
