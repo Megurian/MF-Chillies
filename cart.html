@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cart | MF Chilies </title>
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <script src="script.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Web Icon -->
+    <link rel="shortcut icon" href="icons/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="icons/favicon_io/site.webmanifest">
+</head>
+<body>
+    <div class="container">
+        <div class="header"> <!-- This div is for the header/navbar -->
+            <div class="logo">
+                <a href="index.html">MF Chilies</a>
+            </div>
+            <div class="nav">
+                <a href="products.html" class="text hideOnMobile">PRODUCTS</a>
+                <a href="order.html" class="text hideOnMobile">ORDER</a>
+                <a href="#" class="cart hideOnMobile"><i class='bx bx-cart'></i></a>
+                <a onclick=showSidebar() class="menu-icon"><i class='bx bx-menu'></i></a>
+            </div>
+        </div>
+   
+        <div class="sidebar"> <!-- This div is for the sidebar/navbar -->
+            <div class="logo-sidebar">
+                <a onclick=hideSidebar()><i class='bx bx-arrow-back'></i></a>
+            </div>
+            <div class="nav-sidebar">
+                <a href="products.html" class="text">PRODUCTS</a>
+                <a href="order.html">ORDER</a>
+                <a href="">CART</i></a>
+            </div>
+        </div>
+
+        
+        <!-- THE CART HTML STARTS HERE -->
+        <div class="cart-page">
+            <div class="item-table">
+                <div class="heading">
+                    <h1>Your cart</h1>
+                    <a href="products.html">Continue shopping</a>
+                </div>
+                <div class="table shown">
+                    <table>
+                        <tr>
+                            <th colspan="2">Product</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+
+                        <tr class="row">
+                            <td class="cart-item-image">
+                                <div>
+                                    <img src="img/Flavor Variance/Sweet.webp" width="75px">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-des">
+                                    <p>MF CHilies</p>
+                                    <h3><a href="products.html">Classic Chili Garlic Oil</a></h3>
+                                    <div class="price-tag">
+                                        <span>₱</span><span class="price">85</span> <span class="size">| 100mL</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="quantity-wrapper">
+                                    <div class="quantity-edit">
+                                        <span class="minus"><i class='bx bx-minus' ></i></span>
+                                        <span class="num">01</span>
+                                        <span class="plus"><i class='bx bx-plus' ></i></i></span>
+                                    </div>
+                                    <span class="reset"><i class='bx bx-reset' ></i></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="price-total">
+                                    <span>₱</span> <span class="total"></span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="row">
+                            <td class="cart-item-image">
+                                <div>
+                                    <img src="img/Flavor Variance/XTRA_Hot.webp" width="75px">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-des">
+                                    <p>MF CHilies</p>
+                                    <h3><a href="products.html">Sweet Chili Garlic Oil</a></h3>
+                                    <div class="price-tag">
+                                        <span>₱</span><span class="price">90</span> <span class="size">| 100mL</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="quantity-wrapper">
+                                    <div class="quantity-edit">
+                                        <span class="minus"><i class='bx bx-minus' ></i></span>
+                                        <span class="num">01</span>
+                                        <span class="plus"><i class='bx bx-plus' ></i></i></span>
+                                    </div>
+                                    <span class="reset"><i class='bx bx-reset' ></i></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="price-total">
+                                    <span>₱</span> <span class="total"></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- HIDDEN TABLE FOR SMALLER SCREENS -->
+                <div class="table hidden">
+                    <table>
+                        <tr>
+                            <th colspan="2">Product</th>
+                            <th>Total</th>
+                        </tr>
+
+                        <tr class="row1">
+                            <td class="cart-item-image">
+                                <div>
+                                    <img src="img/Flavor Variance/Sweet.webp" width="75px">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-des">
+                                    <p>MF CHilies</p>
+                                    <h3><a href="">Classic Chili Garlic Oil</a></h3>
+                                    <div class="price-tag">
+                                        <span>₱</span><span class="price">85</span>
+                                    </div>
+                                    <div class="quantity-wrapper">
+                                        <div class="quantity-edit">
+                                            <span class="minus"><i class='bx bx-minus' ></i></span>
+                                            <span class="num">01</span>
+                                            <span class="plus"><i class='bx bx-plus' ></i></i></span>
+                                        </div>
+                                        <span class="reset"><i class='bx bx-reset' ></i></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="price-total">
+                                    <span>₱</span> <span class="total"></span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="row1">
+                            <td class="cart-item-image">
+                                <div>
+                                    <img src="img/Flavor Variance/XTRA_Hot.webp" width="75px">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-des">
+                                    <p>MF CHilies</p>
+                                    <h3><a href="">Sweet Chili Garlic Oil</a></h3>
+                                    <div class="price-tag">
+                                        <span>₱</span><span class="price">90</span>
+                                    </div>
+                                </div>
+                                <div class="quantity-wrapper">
+                                    <div class="quantity-edit">
+                                        <span class="minus"><i class='bx bx-minus' ></i></span>
+                                        <span class="num">01</span>
+                                        <span class="plus"><i class='bx bx-plus' ></i></i></span>
+                                    </div>
+                                    <span class="reset"><i class='bx bx-reset' ></i></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="price-total">
+                                    <span>₱</span> <span class="total"></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="to-checkout">
+                <div class="row">
+                        <span class="row-header">Subtotal</span>
+                        <span>₱</span> <span class="subtotal">2</span>
+                </div>
+                <div class="tax">
+                    <p>Taxes and <a href="">delivery fee</a> calculated at checkout</p>
+                </div>
+                <div class="form-page">
+                    <form action="checkout.html">
+                        <label for="delivery-date">Delivery Date</label>
+                        <input type="date" name="delivery-date" id="delivery-date" required>
+
+                        <label for="Special-inst">Special Instruction</label>
+                        <textarea name="Special-inst" id="Special-inst" cols="10" rows="4"></textarea>
+                        </label>
+
+                        <input type="submit" value="Check out" id="submit" class="submit-bt">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="foot">
+                <div class="footer-text">
+                    <h2> Follow Us </h2>
+                    <p>Follow our social media accounts.</p>
+                    <ul class="icons">
+                        <li> <a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+                        <li> <a href="#"><i class='bx bxl-instagram'></i></a></li>
+                        <li> <a href="#"><i class='bx bxl-twitter' ></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="contact">
+                    <h2> Contact Us </h2> 
+                    <ul class="info">
+                        <li>
+                        <span> <i class='bx bxs-phone-call'></i></span><p><a href="tel:+122024002"></a> +12 2024 002</a></p>
+                        </li>
+                        <li>
+                        <span> <i class='bx bxs-envelope'></i></span><p><a href="mailto:contactus@email.com">contactus@email.com</a></p>
+                        </li>
+                    </ul>
+                </div> 
+
+                <div class="end">
+                    <h2> MF Chilies </h2>
+                    <ul>
+                        <li> MF Chili Authentic Chili Garlic.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyrights -->
+        <div class="copyright">
+            <p> Copyright 2024 MF's Chili Garlic. All Rights Reserved. </p>
+        </div>
+
+    </div>
+</body>
+</html>

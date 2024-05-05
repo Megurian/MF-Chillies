@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Order | MF Chilies </title>
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <script src="script.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Web Icon -->
+    <link rel="shortcut icon" href="icons/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="icons/favicon_io/site.webmanifest">
+</head>
+<body>
+    <div class="container">
+        <div class="header"> <!-- This div is for the header/navbar -->
+            <div class="logo">
+                <a href="index.html">MF Chilies</a>
+            </div>
+            <div class="nav">
+                <a href="products.html" class="text hideOnMobile">PRODUCTS</a>
+                <a href="" class="text hideOnMobile">ORDER</a>
+                <a href="cart.html" class="cart hideOnMobile"><i class='bx bx-cart'></i></a>
+                <a onclick=showSidebar() class="menu-icon"><i class='bx bx-menu'></i></a>
+            </div>
+        </div>
+   
+        <div class="sidebar"> <!-- This div is for the sidebar/navbar -->
+            <div class="logo-sidebar">
+                <a onclick=hideSidebar()><i class='bx bx-arrow-back'></i></a>
+                
+            </div>
+            <div class="nav-sidebar">
+                <a href="products.html" class="text">PRODUCTS</a>
+                <a href="order.html">ORDER</a>
+                <a href="cart.html">CART</i></a>
+            </div>
+        </div>
+
+
+        <!-- THE ORDER HTML STARTS HERE -->
+        <div class="order-pg">
+            <div class="form-pg">
+                <div class="heading-title">
+                   <h1> Order Form </h1>
+               </div>
+                <div class="dropdown">
+                    <div>
+                        <label for="flavr"><b> Select Flavors </b></label>
+                    </div>
+                    <div>
+                        <select class="flavr">
+                            <optgroup label="Select Flavors">
+                                <option value="f1"> Classic Chili Garlic </option>
+                                <option value="f2"> Cripsy Garlic </option>
+                                <option value="f3"> Chili Oil </option>
+                                <option value="f4"> Honey Chili Garlic </option>
+                                <option value="f5"> Mild Chili Garlic </option>
+                                <option value="f6"> Extra Chili Garlic </option>
+                                <option value="f7"> Sweet Chili Garlic </option>
+                                <option value="f8"> ExtraHot Chili Garlic </option>
+                            </optgroup>
+                        </select>
+                    </div> 
+                </div>    
+
+                <div class="size">
+                    <div><p><b> Select Size </b></p></div>
+                    <div class="radios">
+                        <span>
+                            <input type="radio" name="size" value="one">
+                            <label for="one"> 100ml </label>
+                        </span>
+                        <span>
+                            <input type="radio" name="size" value="one2">
+                            <label for="one2"> 120ml </label>
+                        </span>
+                        <span>
+                            <input type="radio" name="size" value="two">
+                            <label for="two"> 200ml </label>
+                        </span>
+                        <span>
+                            <input type="radio" name="size" value="two5">
+                            <label for="two5"> 250ml </label>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="quantity">   
+                    <label><b> Enter Quantity </b></label>
+                    <input class="int" type="number" placeholder="Enter Quantity">
+                </div>
+
+                <div class="buttons">
+                    <button class="check button" onclick="location.href='checkout.html';">Checkout</button>
+                    <button class="cart button" onclick="location.href='cart.html';">Add to Cart</button>
+                    <button class="edit button">Edit Cart Item</button>
+                </div>
+           </div>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

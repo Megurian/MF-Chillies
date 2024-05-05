@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin | MF Chilies </title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <script src="adminscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Web Icon -->
+    <link rel="shortcut icon" href="icons/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="icons/favicon_io/site.webmanifest">
+</head>
+<body>
+    <div class="container">
+        <div class="vertical-nav">
+            <div class="logoAdmin">
+                MF Chilies
+            </div>
+            <div class="navSelection">
+                <a class="start Tab1 active">Dashboard</a>
+                <a class="order Tab2" >Orders</a>
+                <a class="product Tab3">Products</a>
+                <a class="analytic Tab4">Analytics</a>
+                <a class="feedback Tab5">Feedback</a>
+            </div>
+        </div>
+
+        <div class="contentPanel">
+            <div class="inner-nav"> <!-- This for the horizontal nav for each vavSelection-->
+                <div class="navbar">
+                    <div class="navContent welcome">
+                        <b>Welcome, Admin! "Quote"</b>
+                    </div>
+
+                    <div class="navContent ordersNav">
+                       Customer Orders Tab
+                       <button class="filter-btn" onclick="filterTable('Pending')">Pending</button>
+                       <button class="filter-btn" onclick="filterTable('Complete')">Complete</button>
+                       <button class="filter-btn" onclick="filterTable('On Delivery')">On Delivery</button>
+                       <button class="filter-btn" onclick="filterTable('Return')">Return/Replace</button> 
+                    </div>
+
+                    <div class="navContent productsNav">
+                        Products Tab
+                        <button class="filter-btn" id="myBtn1">Add Product</button>
+                        <button class="filter-btn" >Bestseller</button>
+                        <button class="filter-btn" >Low Stock</button>
+                    </div>
+
+                    <div class="navContent analyticsNav">
+                        Analytics Tab
+                    </div>
+
+                    <div class="navContent feedbackNav">
+                        Feedbacks Tab
+                    </div>
+                </div>
+                <span class="settings"><i class='bx bxs-cog'></i></span>
+            </div>
+
+            <!--THIS PART IS FOR DASHBOARD CONTENT-->
+            <div class="panelContent">
+                <div class="content">
+                    <div class="dashboard">
+                        <div class="dashPanel">
+                            <div class="newOrders dashboardInnerPanel">
+                                <div class="number"><p>2</p></div>
+                                <div class="text">New <br> Pending <br> Order</div>
+                            </div>
+                        </div>
+
+                        <div class="dashPanel">
+                            <div class="bestselling dashboardInnerPanel">
+                                <div class="image">
+                                    <img src="img/Flavor Variance/Sweet.webp" alt="sweetChiligarlicpicture" width="210px">
+                                </div>
+                                <div class="text">
+                                    Current <br> High Sales <br> Product
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashPanel">
+                            <div class="revenue dashboardInnerPanel">
+                                <div class="weekIncome"><span class="number">1790</span><span class="currency">PHP</span></div>
+                                <div class="text">This Week's Total Income</div>
+                            </div>
+                        </div>
+
+                        <div class="dashPanel">
+                            <div class="ourRating dashboardInnerPanel">
+                                <div class="stars">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                </div>
+                                <div class="text">Overall Rating</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--THIS PART IS FOR ORDER TABLE CONTENT-->
+                <div class="content">
+                    <div class="customerOrder">
+                        <table id="myTable">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Order Detail</th>
+                                    <th>Status</th>
+                                    <th>Customer Name</th>
+                                    <th>Action</th>
+                                    <th>Last Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td >1</td>
+                                    <td> Flavor: Sweet <br> Size: 100mL <br> Quantity: 1 </td>
+                                    <td>Pending (New order)</td>
+                                    <td>John Doe</td>
+                                    <td>
+                                        <button class="accept Button">Accept</button>
+                                        <button class="cancel Button">Cancel</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td> Flavor: Sweet <br> Size: 100mL <br> Quantity: 1 </td>
+                                    <td>Pending (New order)</td>
+                                    <td>Jane Smith</td>
+                                    <td>
+                                        <button class="accept Button">Accept</button>
+                                        <button class="cancel Button">Cancel</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td> Flavor: Sweet <br> Size: 100mL <br> Quantity: 1 </td>
+                                    <td>Completed</td>
+                                    <td>Johns Van</td>
+                                    <td>
+                                        <button class="delete Button">Delete</button>
+                                    </td>
+                                    <td>
+                                        Returned
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td> Flavor: Sweet <br> Size: 100mL <br> Quantity: 1 </td>
+                                    <td>Completed</td>
+                                    <td>Ametheyst Shard</td>
+                                    <td>
+                                        <button class="delete Button">Delete</button>
+                                    </td>
+                                    <td>
+                                        Replaced
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td> Flavor: Sweet <br> Size: 100mL <br> Quantity: 1 </td>
+                                    <td>On Delivery</td>
+                                    <td>Michael Johnson</td>
+                                    <td>
+                                        <button class="check Button">Parcel Status</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td> Flavor: Sweet <br> Size: 100mL <br> Quantity: 1 </td>
+                                    <td>On Delivery</td>
+                                    <td>Emily Davis</td>
+                                    <td>
+                                        <button class="check Button">Parcel Status</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td> Flavor: Sweet <br> Size: 100mL <br> Quantity: 1 </td>
+                                    <td>Return/Replace request</td>
+                                    <td>Karen Palindrome</td>
+                                    <td>
+                                        <button class="check Button">Check</button>
+                                        <button class="Button">Return</button>
+                                        <button class="Button">Replace</button>
+                                        <button class="reject Button">Reject</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td> Flavor: Sweet <br> Size: 100mL <br> Quantity: 1 </td>
+                                    <td>Return/Replace request</td>
+                                    <td>Kevin Tennison</td>
+                                    <td>
+                                        <button class="check Button">Check</button>
+                                        <button class="Button">Return</button>
+                                        <button class="Button">Replace</button>
+                                        <button class="reject Button">Reject</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!--THIS PART IS FOR PRODUCT CATALOG CONTENT-->
+                <div class="content">
+                    <div class="productCatalog">
+                        <div id="myModal" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <div class="title">
+                                    <h2>Add Product</h2>
+                                    <p class="close">&times;</p>
+                                </div>
+                                <div class="addProductForm">
+                                    <form class="form-container">
+                                        <div class="form-group">
+                                            <label for="productName">Product Name:</label>
+                                            <input type="text" id="productName" name="productName" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="description">Description:</label>
+                                            <textarea id="description" name="description" required></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="flavor">Flavor:</label>
+                                            <input type="text" id="flavor" name="flavor" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="sizes">Sizes Available:</label>
+                                            <select id="sizes" name="sizes" multiple required>
+                                                <option value="100ml">100mL</option>
+                                                <option value="120ml">120mL</option>
+                                                <option value="200ml">200mL</option>
+                                                <option value="250ml">250mL</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="stock">Stock:</label>
+                                            <input type="number" id="stock" name="stock" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="price">Price:</label>
+                                            <input type="number" id="price" name="price" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit">Add Product</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <table>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Flavor</th>
+                                <th>Sizes Available</th>
+                                <th>Stock</th>
+                                <th>Price</th>
+                                <th>Amount Sold</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>Sweet Chili Garlic</td>
+                                <td>Sweet</td>
+                                <td>100mL, 200mL, 300mL</td>
+                                <td>15</td>
+                                <td>90 PHP</td>
+                                <td>20</td>
+                                <td class="action"><a href="#" class="Button">Edit</a> | <a href="#" class="reject Button">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Devil's Chili Garlic Oil</td>
+                                <td>Devil's</td>
+                                <td>100mL, 200mL, 300mL</td>
+                                <td>15</td>
+                                <td>125 PHP</td>
+                                <td>15</td>
+                                <td class="action"><a href="#" class="Button">Edit</a> | <a href="#" class="reject Button">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Classic Chili Garlic Oil</td>
+                                <td>Classic</td>
+                                <td>100mL, 200mL, 300mL</td>
+                                <td>30</td>
+                                <td>85 PHP</td>
+                                <td>10</td>
+                                <td class="action"><a href="#" class="Button">Edit</a> | <a href="#" class="reject Button">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Mild Chili Garlic</td>
+                                <td>Mild</td>
+                                <td>100mL, 200mL, 300mL</td>
+                                <td>30</td>
+                                <td>80 PHP</td>
+                                <td>10</td>
+                                <td class="action"><a href="#" class="Button">Edit</a> | <a href="#" class="reject Button">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Honey Chili Garlic Oil</td>
+                                <td>Honey</td>
+                                <td>100mL, 120mL, 200mL, 250mL</td>
+                                <td>50</td>
+                                <td>95 PHP</td>
+                                <td>10</td>
+                                <td class="action"><a href="#" class="Button">Edit</a> | <a href="#" class="reject Button">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>XTRA Hot Chili Garlic</td>
+                                <td>XTRA Hot</td>
+                                <td>100mL, 200mL, 300mL</td>
+                                <td>30</td>
+                                <td>100 PHP</td>
+                                <td>8</td>
+                                <td class="action"><a href="#" class="Button">Edit</a> | <a href="#" class="reject Button">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Chili Oil Spiced Oil</td>
+                                <td>Chili Oil</td>
+                                <td>100mL, 200mL, 300mL</td>
+                                <td>30</td>
+                                <td>75 PHP</td>
+                                <td>7</td>
+                                <td class="action"><a href="#" class="Button">Edit</a> | <a href="#" class="reject Button">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Crispy Chili Garlic</td>
+                                <td>Crispy</td>
+                                <td>100mL, 200mL, 300mL</td>
+                                <td>30</td>
+                                <td>95 PHP</td>
+                                <td>7</td>
+                                <td class="action"><a href="#" class="Button">Edit</a> | <a href="#" class="reject Button">Delete</a></td>
+                            </tr>       
+                        </table>
+                    </div>
+                </div>
+                
+                <!--THIS PART IS FOR SALES REPORT CONTENT-->
+                <div class="content">
+                    <div class="saleReport">
+                        <div id="chartModal" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <div class="title">
+                                    <h2>Monthly Revenue</h2>
+                                    <p class="closechart">&times;</p>
+                                </div>
+                                <div>
+                                    <canvas id="monthlyChart" class="chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="income">
+                            <h2>Income for Today</h2>
+                            <p>Revenue: PHP 500</p>
+                            <p>Orders: 7</p>
+                        </div>
+                
+                        <h2>Sales Overview</h2>
+                        <div class="income">
+                            <h2>Last Week Income</h2>
+                            <p>Total Revenue: PHP 3470</p>
+                            <p>Total Orders: 45</p>
+                        </div>
+                
+                        <table>
+                            <h2> 3 Recent Months</h2>
+                            <tr>
+                                <th>Monthly</th>
+                                <th>Revenue</th>
+                                <th>Orders</th>
+                            </tr>
+                            <tr>
+                                <td>February</td>
+                                <td>PHP 48,370</td>
+                                <td>430</td>
+                            </tr>
+                            <tr>
+                                <td>March</td>
+                                <td>PHP 60,000</td>
+                                <td>589</td>
+                            </tr>
+                            <tr>
+                                <td>April</td>
+                                <td>PHP 59,280</td>
+                                <td>562</td>
+                            </tr>
+                            <!-- Add more rows for additional dates -->
+                        </table>
+                
+                        <h2>Current Bestseller</h2>
+                        <table>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Sales</th>
+                                <th>Revenue</th>
+                            </tr>
+                            <tr>
+                                <td>Sweet Chili Garlic Oil</td>
+                                <td>20</td>
+                                <td>PHP 1800</td>
+                            </tr>
+                            </tr>
+                            <!-- Add more rows for additional products -->
+                        </table>
+                        
+                        <button class="filter-btn" id="myBtn2"><h2>Monthly Revenue Chart</h2></button>
+                    </div>
+                </div>
+                
+                <!--THIS PART IS FOR CUSTOMER FEEDBACK CONTENT-->
+                <div class="content">
+                    <div class="customerFeedback">
+                        <h1>Feedback Overview</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <th>Feedback</th>
+                                    <th>Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Michelle S.</td>
+                                    <td>Absolutely love this chili garlic oil! It adds the perfect kick to my dishes. The balance of heat and flavor is spot on. Highly recommend for anyone who enjoys a little spice in their meals!</td>
+                                    <td>5</td>
+                                 </tr>
+                                <tr>
+                                    <td>David K.</td>
+                                    <td>Chili garlic oil has become a staple in my kitchen, and this one is top-notch. The aroma alone is mouthwatering, and the flavor doesn't disappoint. It's versatile too—I use it on everything from stir-fries to noodles to pizza. Definitely worth stocking up on!</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Samantha B.</td>
+                                    <td>Devil's Chili Garlic Oil definitely came from hell!!! Spiciness level 100000</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                <td>Andrew L.</td>
+                                    <td>This chili garlic oil is a game-changer! The heat level is just right for adding a spicy kick to any dish, and the garlic infusion takes it to the next level. I find myself reaching for it every time I cook. Plus, the bottle design makes it easy to pour without any mess. Highly recommend giving it a try!</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Laura M.</td>
+                                    <td>I love the Honey flavor!! Just the right sweetness and not overwhelming. Must try!</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Michael R.</td>
+                                    <td>This chili garlic oil is like liquid gold in a bottle! The perfect blend of spicy and savory, it elevates every dish I use it in. Whether drizzling over roasted veggies or mixing into marinades, its flavor profile never fails to impress. I've even started gifting it to friends—it's that good!</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Emily G.</td>
+                                    <td>Chili garlic oil = flavor explosion! It's a must-have condiment in my kitchen. Love it!</td>
+                                    <td>5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>

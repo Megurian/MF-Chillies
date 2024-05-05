@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Checkout | MF Chilies </title>
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <script src="script.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Web Icon -->
+    <link rel="shortcut icon" href="icons/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="icons/favicon_io/site.webmanifest">
+</head>
+<body>
+        <div class="checkoutHeader">
+            <div class="brand-name">
+                <img src="icons/favicon_io/android-chrome-192x192.png" alt="">
+                <a href="index.html">MF CHILIES</a>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="buyerInfo">
+                <div class="formWrapper">
+                    <form action="">
+
+                        <label class="contact label"><h3>Contact</h3><input type="text" id="contact" name="contact" placeholder="Email or mobile phone number"></label>
+                        
+
+                        <label class="delivery label"><h3>Delivery</h3></label>
+                        <div class="DeliveryMethod">
+                            <label class="custom-div">
+                                <input type="radio" name="delivery-method" value="Deliver"> Deliver <i class='bx bxs-truck'></i>
+                            </label>
+                        
+                            <label class="custom-div">
+                                <input type="radio" name="delivery-method" value="Pickup"> Pickup <i class='bx bxs-package'></i>
+                            </label>
+                            <div id="message1" class="pickStatus">
+                                <h4>Pickup locations</h4>
+                                <p>There is no store with stock close to your location</p>
+                            </div>
+                        </div>
+                            
+
+                        <label class="payment label">
+                            <h3>Payment</h3>
+                            <p>All transactions are secure and encrypted.</p>
+                        </label>
+                        <div class="Pay">
+                            <label class="custom-div">
+                                <input type="radio" name="payment-method" value="Credit"> Credit Card <i class='bx bxl-visa'></i> <i class='bx bxl-mastercard' ></i>
+                            </label>
+                            <div id="payment1" class="paymentMeth">
+                                <div class="inputWrap">
+                                    <input type="number" id="cardNo" name="" placeholder="Card number" required>
+                                    <div class="ExpiSecu">
+                                        <input type="text" id="expiryDate" name="expiryDate" maxlength="10" placeholder="Expiration date (MM-YY)" required>
+                                        <input type="number" id="" name="" placeholder="Security code" required>
+                                    </div>
+                                    <input type="text" placeholder="Name on card" required>
+                                </div>
+                            </div>
+                        
+                            <label class="custom-div">
+                                <input type="radio" name="payment-method" value="Paypal"> Paypal <i class='bx bxl-paypal' ></i>
+                            </label>
+                            <div id="payment2" class="paymentMeth">
+                                <p>After clicking "Place Order", you will be redirected to PayPal to complete your purchase securely.</p>
+                            </div>
+                        
+                            <label class="custom-div">
+                                <input type="radio" name="payment-method" value="Online"> Secure Payment Online <p class="gcash">GCash</p>
+                            </label>
+                            <div id="payment3" class="paymentMeth">
+                                <p>After clicking "Place Order", you will be redirected to GCash to complete your purchase securely.</p>
+                            </div>
+                        </div>
+
+
+                        <label class="billing label">
+                            <h3>Billing address</h3>
+                        </label>
+                        <div class="billingAdd">
+                            <select class="countries">
+                                <optgroup label="Country/Region">
+                                    <option value="philippines">Philippines</option>
+                                    <option value="brunei">Brunei Darussalam</option>
+                                    <option value="cambodia">Cambodia</option>
+                                    <option value="indonesia">Indonesia</option>
+                                    <option value="laos">Lao PDR</option>
+                                    <option value="malaysia">Malaysia</option>
+                                    <option value="myanmar">Myanmar</option>
+                                    <option value="singapore">Singapore</option>
+                                    <option value="thailand">Thailand</option>
+                                    <option value="vietnam">Vietnam</option>
+                                 </optgroup>
+                            </select>
+
+                            <div class="fullname">
+                                <input type="text" name="" id="" placeholder="First name">
+                                <input type="text" name="" id="" placeholder="Last name">
+                            </div>
+
+                            <input type="text" name="" id="localaddress" placeholder="House No./Lot/Block/Phase, Street Name, Subdivision or Sitio">
+                            <input type="text" name="" id="apartment" placeholder="Apartment, suite, etc. (optional)">
+
+                            <div class="regional">
+                                <input type="text" name="" id="" placeholder="Postal code">
+                                <input type="text" name="" id="" placeholder="City">
+                            </div>
+
+                            <select class="region">
+                                <optgroup label="Region:">
+                                    <option value="philippines">Select Region</option>
+                                    <option value="philippines">KIMI</option>
+                                 </optgroup>
+                            </select>
+
+                            <input type="number" name="" id="" placeholder="Phone (Optional)">
+                        </div>
+
+                        <input type="submit" value="Place Order" name="" id="placeorder">
+                    </form>
+                </div>
+            </div>
+            <div class="productList">
+                <div class="miniReceipt">
+                    <div class="product one">
+                        <div class="imgBG">
+                            <img src="img/Flavor Variance/Classic.webp" alt="Classic">
+                            <div class="quantityCounter">1</div>
+                        </div>
+                        
+                        <div class="productName">
+                            <span>Classic Chili Garlic Oil</span> <span>| 100mL</span>
+                        </div>
+
+                        <span class="price">₱ 85</span>
+                    </div>
+
+                    <div class="product two">
+                        <div class="imgBG">
+                            <img src="img/Flavor Variance/Sweet.webp" alt="Classic">
+                            <div class="quantityCounter">1</div>
+                        </div>
+                        <div class="productName">
+                            <span>Sweet Chili Garlic Oil</span> <span>| 100mL</span>
+                        </div>
+                        <span class="price">₱ 90</span>
+                    </div>
+
+                    <div class="voucher">
+                        <input type="text" placeholder="Discount code">
+                        <button>Apply</button>
+                    </div>
+
+                    <div class="subtotal">
+                        <span class="miniHeader">Subtotal</span>
+                        <span class="price">₱ 175</span>
+                    </div>
+
+                    <div class="deliveryFee">
+                        <span class="miniHeader">Delivery</span> <span class="price">₱ ---</span>
+                    </div>
+
+                    <div class="grandFee">
+                        <span class="total">Total</span> <span class="text">PHP</span> <span class="grandTotal">₱ 175</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</body>
+</html>
