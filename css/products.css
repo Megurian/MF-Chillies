@@ -14,7 +14,7 @@ the following class name are already used for navigation bar:
 }
 
 .carousel .list .item {
-    background-image: url(../img/products-bg.webp); 
+    background-image: url(../img/products-bg.webp);
     background-size: cover;
     position: absolute;
     inset:  0 0 0 0;
